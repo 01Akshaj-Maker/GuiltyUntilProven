@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test AI API</title>
+</head>
+<body>
+    <h1>Test AI API Endpoint</h1>
+    <button onclick="testAPI()">Test API</button>
+    <pre id="result"></pre>
+
+    <script>
+        async function testAPI() {
+            const result = document.getElementById('result');
+            result.textContent = 'Testing...';
+
+            try {
+                const requestBody = {
+                    suspect: {
+                        name: "Alex Chen",
+                        role: "Engineer",
+                        personality: "confident and straightforward",
+                        alibi: "Engine Room",
+                        actualLocation: "Engine Room",
+                        isImpostor: false
+                    },
+                    question: "Where were you at 14:45?",
+                    history: []
+                };
+
+                console.log('Request body:', requestBody);
+
+                const response = await fetch('/api/ai/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                result.textContent = JSON.stringify({
+                    status: response.status,
+                    data: data
+                }, null, 2);
+            } catch (error) {
+                console.error('Error:', error);
+                result.textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
