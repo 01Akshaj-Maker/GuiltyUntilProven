@@ -39,6 +39,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://guiltyuntilproven.com',
   },
+  
+  // 🔥 ADD GOOGLE VERIFICATION HERE 🔥
+  // Replace the content value with your actual verification code from Google Search Console
+  verification: {
+    google: '01Vm_HMFpKVt_YGrWdVNvVYwrnX1yJ-wNVpQWudcIjw',
+  },
 };
 
 export default function RootLayout({
