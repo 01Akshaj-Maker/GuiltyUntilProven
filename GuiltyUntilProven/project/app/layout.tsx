@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
-// 🔥 REPLACE THIS ENTIRE SECTION 🔥
 export const metadata: Metadata = {
   title: 'Guilty Until Proven - AI Detective Investigation Game',
   description: 'Interrogate suspects and uncover hidden evidence to solve crimes. Use strategic questioning to discover clues in this AI-powered detective investigation game. Play free now!',
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Interrogate suspects and uncover hidden evidence to solve crimes. Use strategic questioning to discover clues in this AI-powered detective game.',
     images: [
       {
-        url: 'https://guiltyuntilproven.com',
+        url: 'https://guiltyuntilproven.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Guilty Until Proven - Detective Game',
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guilty Until Proven - AI Detective Investigation Game',
     description: 'Interrogate suspects and uncover hidden evidence to solve crimes. Use strategic questioning in this AI detective game.',
-    images: ['https://guiltyuntilproven.com'],
+    images: ['https://guiltyuntilproven.com/og-image.png'],
   },
   
   // Additional
